@@ -1,0 +1,119 @@
+From 80acf62fe12e988cd8431a1a09b2e9a2dc45336b Mon Sep 17 00:00:00 2001
+From: Yohanes Rizky Gumilir <yorigum@gmail.com>
+Date: Fri, 15 Feb 2019 11:09:39 +0700
+Subject: [PATCH] Changed the HTML for the site.
+
+---
+ blog/__pycache__/urls.cpython-36.pyc       | Bin 0 -> 247 bytes
+ blog/__pycache__/views.cpython-36.pyc      | Bin 0 -> 295 bytes
+ blog/urls.py                               |   6 ++++++
+ blog/views.py                              |   6 ------
+ mysite/__pycache__/settings.cpython-36.pyc | Bin 2265 -> 2266 bytes
+ mysite/__pycache__/urls.cpython-36.pyc     | Bin 890 -> 935 bytes
+ mysite/urls.py                             |   3 ++-
+ 7 files changed, 8 insertions(+), 7 deletions(-)
+ create mode 100644 blog/__pycache__/urls.cpython-36.pyc
+ create mode 100644 blog/__pycache__/views.cpython-36.pyc
+ create mode 100644 blog/urls.py
+
+diff --git a/blog/__pycache__/urls.cpython-36.pyc b/blog/__pycache__/urls.cpython-36.pyc
+new file mode 100644
+index 0000000000000000000000000000000000000000..41f2b199af5e9098acab61cc233fc21d56fa692b
+GIT binary patch
+literal 247
+zcmX|5I|{-;5S_^;@qYqOkS2{?5E1Nc>_R{yv&P8g!)~H@2oK_wwzU#Gft9le4!p+<
+zZ{FiAX0!1-Ic7HicryMI@U~`{n2CT;L4_$IkVis!l}H7GMDnFL`xH=k7X_vP4R#O>
+zU+jSht>5O|>4m=|xRmm0EZ9-om~O91)47*AujDog?S#&GT{Lm8mC+tsw5y<fM<J7)
+vu)=wr)U|nl9y`I&XTC|YpSdX6oE=nCWG*IdZ+5t>8tRo?xfaHyO>ru|0dPEO
+
+literal 0
+HcmV?d00001
+
+diff --git a/blog/__pycache__/views.cpython-36.pyc b/blog/__pycache__/views.cpython-36.pyc
+new file mode 100644
+index 0000000000000000000000000000000000000000..da206e2a05a04fb1ad16caf7bee1c1fc6ebb3ed1
+GIT binary patch
+literal 295
+zcmXr!<>lIDnHE#Zz`*brh~a<<$Z`PUVhJFT!jQt4!;s4u#mLBz!j!_?!Vtxj!V=7&
+z$@&r~%b>}4i>)X%FD11onGwVX0uapt#Lhrm%mXA!7;1oqWHK}}1GO>vRS75M<frQw
+z<QJF3=VTU_=w+1T=4dh&fvg1@$6l0LSejZ~vXY?)WXdlYXRDZ$ti-(Z{PfJCoZ=Xe
+z=9sd~)be7zg34Q*aAQE)i$MefV-XvW^wVUH5`bvbE6&I-DoHLaDF#~tmIfP+M6d$2
+V+~Tmw%}*)KNwov{0c;o#BLHTAKimKS
+
+literal 0
+HcmV?d00001
+
+diff --git a/blog/urls.py b/blog/urls.py
+new file mode 100644
+index 0000000..27bbfa7
+--- /dev/null
++++ b/blog/urls.py
+@@ -0,0 +1,6 @@
++from django.urls import path
++from . import views
++
++urlpatterns = [
++    path('', views.post_list, name='post_list'),
++]
+\ No newline at end of file
+diff --git a/blog/views.py b/blog/views.py
+index 9596879..88071a3 100644
+--- a/blog/views.py
++++ b/blog/views.py
+@@ -1,9 +1,3 @@
+ from django.shortcuts import render
+-
+ def post_list(request):
+     return render(request, 'blog/post_list.html', {})
+-
+-
+-
+-# this my view
+-#  Create your views here.
+diff --git a/mysite/__pycache__/settings.cpython-36.pyc b/mysite/__pycache__/settings.cpython-36.pyc
+index 42e3efe2355a8313aad0984b57e2b1414c2f3da6..6ff760ddc69d7ba5db95d1e1c3ae0b50e555c445 100644
+GIT binary patch
+delta 164
+zcmca9cuSDen3tC;PBSfL=S0q?dhryA6v-5+6zLS1be2rU6xlf}>5NglDRNPKDe@@_
+zsf<}nS^TMNDT>WZDN1vgG8v-;Qj}9vfGU+!RKcVgm{iYXOlOG_OwouEO3{oGP7#k1
+z0b)@g7E95J5>H_YX3*45)L~>`;Bv`I%uCN#C{8UY$=uAv7|F=!wmF3<hKVs`^8pq~
+F765<lDLnuH
+
+delta 162
+zcmca5cvFzmn3tEURxdSX$3)JidX^ON6p0kc6sZ*Hbe2rU6qz|J>5NglDY8*~DRL?D
+zsf<}nS^TMNDGJR@DT;HLG8v-;Qj}7Zfhv_!RKTPvm{iMTOlOG_Oi_;#O3{cCPGN}>
+z0b)@g7E95L5>H_YX3*41)L~>`;Bv`I%uCN#C{8UY$=uAv7|F;OvN?q*hH3Lb7D*NW
+DB|a#&
+
+diff --git a/mysite/__pycache__/urls.cpython-36.pyc b/mysite/__pycache__/urls.cpython-36.pyc
+index b6c84826a699e368780d8201e2cbe578e3e5fae2..e953bf6c08c72120c184fc5f98e5994e90678e1b 100644
+GIT binary patch
+delta 212
+zcmeyxww%4*n3tDpnN?bhJ~IQuV+JI^3S>I~aWRNUVTfW#VN7AlVa#QUVqyfbnRA$P
+zS)y2SS)*7P8B$qNSW=m?*s|E0nSgB8RMr%>X2xcwbfzed6!u^SO^(ETCI*Jw%HqtD
+zRE5wW9|h<9ytK^p(vA5!Od3qLSPBwLGH$VF<|XHprleM}C8p$N=IP&JsNzh@$xqiS
+sEy^kO)8w4|mdSvrh-I=AvpgF&&{aj;lkJ%ec{qSf7DgUM0cIXX0BajBOaK4?
+
+delta 146
+zcmZ3^{);Wbn3tD}Lo+pok(q(vF#{3+@);a}xYz(lq%cG=q%fv1<uK+lMKLjg*vvW1
+zxhzpEj0~wPDJ-c>S*%%X%}nWxQS2$K!3>&g8#9`jgcxtJ6eN~pRIw$d<YwmS`)P7a
+g7G^e>?7=L<#tAgFh;wolvmqB7kjcWx!^p!700#gWYybcN
+
+diff --git a/mysite/urls.py b/mysite/urls.py
+index a86e4a5..79cc454 100644
+--- a/mysite/urls.py
++++ b/mysite/urls.py
+@@ -14,8 +14,9 @@ Including another URLconf
+     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
+ """
+ from django.contrib import admin
+-from django.urls import path
++from django.urls import path, include
+ 
+ urlpatterns = [
+     path('admin/', admin.site.urls),
++    path('', include('blog.urls')),
+ ]
+-- 
+2.18.0.windows.1
+
